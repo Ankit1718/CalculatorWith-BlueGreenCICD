@@ -42,7 +42,7 @@ jobs:
     - name: Swap staging to production
       run: |
         az webapp deployment slot swap \
-          --name CalulatorTest \
+          --name calulatortest \
           --resource-group Calculator-rg \
           --slot staging \
           --target-slot production
