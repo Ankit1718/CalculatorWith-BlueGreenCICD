@@ -27,3 +27,23 @@ jobs:
        slot-name: staging
        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
        package: ./publish
+
+       
+  swap-to-production:
+    needs: build-deploy
+    runs-on: ubuntu-latest
+    environment: production  
+
+    steps:
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Swap staging to production
+      run: |
+        az webapp deployment slot swap \
+          --name CalulatorTest \
+          --resource-group Calculator-rg \
+          --slot staging \
+          --target-slot production
