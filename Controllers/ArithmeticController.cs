@@ -18,7 +18,7 @@ namespace CalculatorTest.Controllers
         {
 
             decimal a = 10;
-            decimal b = 100;
+            decimal b = 10;
 
             Arithmetic result = new Arithmetic()
             {
