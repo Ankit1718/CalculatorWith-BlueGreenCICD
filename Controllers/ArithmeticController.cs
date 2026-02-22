@@ -17,8 +17,8 @@ namespace CalculatorTest.Controllers
         public IActionResult ArithmeticCalculation()
         {
 
-            decimal a = 10;
-            decimal b = 10;
+            decimal a = 5;
+            decimal b = 5;
 
             Arithmetic result = new Arithmetic()
             {
