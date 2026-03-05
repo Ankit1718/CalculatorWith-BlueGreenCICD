@@ -50,9 +50,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Swap Staging to Production
-      run: |
-        az webapp deployment slot swap \
-        --name CalculatorProgram \
-        --resource-group Calculator-rg \
-        --slot staging \
-        --target-slot production
+      run: az webapp deployment slot swap --name CalculatorProgram --resource-group Calculator-rg --slot staging --target-slot production
