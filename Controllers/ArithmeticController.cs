@@ -23,9 +23,9 @@ namespace CalculatorTest.Controllers
             Arithmetic result = new Arithmetic()
             {
                 Add = a + b,
-                Sub = a - b,
-                Multiply = a * b,
-                Divide = b != 0 ? a / b : 0
+                Sub = a - b
+                //Multiply = a * b,
+                //Divide = b != 0 ? a / b : 0
             };
          
 
