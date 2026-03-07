@@ -68,7 +68,7 @@ jobs:
 
   deploy-ui:
     needs: swap-to-production
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
 
