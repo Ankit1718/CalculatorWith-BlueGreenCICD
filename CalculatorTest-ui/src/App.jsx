@@ -7,16 +7,18 @@ function App() {
   const [num2,setNum2] = useState("");
   const [result,setResult] = useState("");
 
+const API_BASE ="https://calculatorprogram.azurewebsites.net/api/Arithmetic";
+
   const calculateAdd = async () => {
 
-    const res= await axios.get(`https://localhost:44372/api/Arithmetic/calculate?a=${num1}&b=${num2}`);
+    const res= await axios.get(`${API_BASE}/calculate?a=${num1}&b=${num2}`);
    
     setResult(res.data.add);
   };
 
    const calculateSub = async() => {
 
-    const res = await axios.get(`https://localhost:44372/api/Arithmetic/calculate?a=${num1}&b=${num2}`);
+    const res = await axios.get(`${API_BASE}?a=${num1}&b=${num2}`);
 
     setResult(res.data.sub);
   };
