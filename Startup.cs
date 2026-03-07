@@ -28,6 +28,19 @@ namespace CalculatorTest
         {
 
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReact",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:5173",
+                                            "https://calculatorprogram-ui.azurestaticapps.net",
+                                             "https://icy-glacier-0ab493200.6.azurestaticapps.net")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CalculatorTest", Version = "v1" });
@@ -47,6 +60,8 @@ namespace CalculatorTest
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("AllowReact");
 
             app.UseAuthorization();
 

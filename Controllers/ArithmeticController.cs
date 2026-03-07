@@ -14,18 +14,15 @@ namespace CalculatorTest.Controllers
     {
 
         [HttpGet("calculate")]
-        public IActionResult ArithmeticCalculation()
+        public IActionResult ArithmeticCalculation(decimal a, decimal b)
         {
 
-            decimal a = 5;
-            decimal b = 5;
 
             Arithmetic result = new Arithmetic()
             {
                 Add = a + b,
                 Sub = a - b
-                //Multiply = a * b,
-                //Divide = b != 0 ? a / b : 0
+                
             };
          
 
