@@ -53,6 +53,8 @@ const clear=()=>{
 
       <h3 style={{marginLeft:"50px"}}>Result: {result}</h3>
 
+      <h6 style={{marginLeft:"10px",color:"red"}}>Calci with blob storage!</h6>
+
     </div>
     </div>
   );
