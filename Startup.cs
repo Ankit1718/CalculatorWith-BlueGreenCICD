@@ -38,10 +38,10 @@ namespace CalculatorTest
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:5173",
-                                            "https://calculatorprogram-ui.azurestaticapps.net",
                                              "https://icy-glacier-0ab493200.6.azurestaticapps.net")
                                .AllowAnyHeader()
-                               .AllowAnyMethod();
+                               .AllowAnyMethod()
+                               .AllowCredentials(); 
                     });
             });
             services.AddSwaggerGen(c =>
