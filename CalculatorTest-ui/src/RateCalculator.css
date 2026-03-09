@@ -1,0 +1,145 @@
+body{
+ background:#0f0f16;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MAIN CARD */
+
+.mainBlock{
+ width:1000px;
+ background:#1e1e27;
+ margin:auto;
+ margin-top:40px;
+ border-radius:10px;
+ padding:30px;
+ box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+/* TITLE */
+
+.headtitle{
+ text-align:center;
+ font-size:28px;
+ background:linear-gradient(135deg,#f557d3,#b794f4);
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+ text-align:center;
+ color:#ccc;
+ font-size:14px;
+ margin-bottom:25px;
+}
+
+/* MAIN GRID */
+
+.calculatorContainer{
+ display:flex;
+ gap:25px;
+}
+
+/* LEFT PANEL */
+
+.leftPanel{
+ flex:2;
+ background:#272730;
+ padding:20px;
+ border-radius:10px;
+ display:flex;
+ flex-direction:column;
+ gap:15px;
+}
+
+.leftPanel label{
+ color:#cfcfcf;
+ font-size:14px;
+}
+
+.inputBox{
+ background:#1e1e27;
+ color:white;
+ border:none;
+ padding:10px;
+ border-radius:6px;
+}
+
+/* BUTTONS */
+
+.rateType{
+ display:flex;
+ gap:10px;
+}
+
+.activeBtn{
+ flex:1;
+ padding:10px;
+ background:#00bcd4;
+ border:none;
+ border-radius:6px;
+ color:white;
+}
+
+.inactiveBtn{
+ flex:1;
+ padding:10px;
+ background:#1e1e27;
+ border:1px solid #444;
+ color:#aaa;
+ border-radius:6px;
+}
+
+/* SLIDERS */
+
+.slider{
+ width:50%;
+}
+
+/* RIGHT PANEL */
+
+.rightPanel{
+ flex:1;
+ background:linear-gradient(160deg,#24323a,#2e3e45);
+ padding:20px;
+ border-radius:10px;
+ color:white;
+}
+
+.rightPanel h3{
+ color:#ff7edb;
+}
+
+.smallText{
+ font-size:12px;
+ color:#ccc;
+}
+
+.price{
+ font-size:38px;
+ font-weight:bold;
+ color:#00e0ff;
+}
+
+.perHour{
+ margin-bottom:20px;
+}
+
+
+
+.breakdown{
+ display:flex;
+ flex-direction:column;
+ gap:8px;
+}
+
+.row{
+ display:flex;
+ justify-content:space-between;
+ font-size:14px;
+ color:#ddd;
+}
+
+.total{
+ color:#00e0ff;
+ font-weight:bold;
+}

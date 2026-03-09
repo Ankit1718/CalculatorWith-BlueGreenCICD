@@ -1,7 +1,11 @@
 import { useState } from "react";
 import axios, { Axios } from "axios";
+import RateCalculator from "./RateCalculator";
 
 function App() {
+
+
+ 
 
   const [num1,setNum1] = useState("");
   const [num2,setNum2] = useState("");
@@ -30,8 +34,14 @@ const clear=()=>{
 }
 
   return (
+
+
+   
+
+
     <div>
-<div style={{border:"1px solid grey",borderRadius:"10px",marginLeft:"500px",width: "265px"}}>
+      <RateCalculator />
+        <div style={{border:"1px solid grey",borderRadius:"10px",marginLeft:"500px",width: "265px"}}>
       <h2 style={{marginLeft:"50px"}}>Calculator</h2>
 
       <input type="number" placeholder="Enter first number" style={{marginLeft:"35px"}}
@@ -55,8 +65,10 @@ const clear=()=>{
 
       <h6 style={{marginLeft:"15px",color:"red"}}>Calci with blob storage!</h6>
 
+        </div>
     </div>
-    </div>
+
+  
   );
 }
 
